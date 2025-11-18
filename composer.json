@@ -1,0 +1,15 @@
+{
+    "name": "administrador/nwork_api",
+    "autoload": {
+        "psr-4": {
+            "Administrador\\NworkApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "66biel66",
+            "email": "gbsanto751@gmail.com"
+        }
+    ],
+    "require": {}
+}
