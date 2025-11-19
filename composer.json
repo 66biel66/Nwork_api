@@ -2,7 +2,7 @@
     "name": "administrador/nwork_api",
     "autoload": {
         "psr-4": {
-            "Administrador\\NworkApi\\": "src/"
+            "Administrador\\NworkApi\\": "src/", "Generic\\": "generic/"
         }
     },
     "authors": [

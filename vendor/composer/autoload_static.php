@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit60b6ac6aa13ebe9e90a57fd6aa3360a0
 {
     public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'Generic\\' => 8,
+        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
@@ -18,6 +22,10 @@ class ComposerStaticInit60b6ac6aa13ebe9e90a57fd6aa3360a0
     );
 
     public static $prefixDirsPsr4 = array (
+        'Generic\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/generic',
+        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
@@ -30,6 +38,20 @@ class ComposerStaticInit60b6ac6aa13ebe9e90a57fd6aa3360a0
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
+        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
+        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
+        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
+        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
+        'Firebase\\JWT\\JWTExceptionWithPayloadInterface' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWTExceptionWithPayloadInterface.php',
+        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
+        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
+        'Generic\\Endpoint' => __DIR__ . '/../..' . '/generic/Endpoint.php',
+        'Generic\\MysqlFactory' => __DIR__ . '/../..' . '/generic/MysqlFactory.php',
+        'Generic\\MysqlSingleton' => __DIR__ . '/../..' . '/generic/MysqlSingleton.php',
+        'Generic\\Retorno' => __DIR__ . '/../..' . '/generic/Retorno.php',
+        'Generic\\Rotas' => __DIR__ . '/../..' . '/generic/Rotas.php',
+        'Generic\\Token' => __DIR__ . '/../..' . '/generic/Token.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

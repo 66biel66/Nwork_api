@@ -2,18 +2,18 @@
 
 namespace Generic;
 
-use generuc\Token;
+use generic\Token;
 
-class rotas {
+class Rotas {
 
     private $rotas = [ ];
 
     public function __construct(){
-        $this ->rotas ['/login'] = new Endpoint("Controller/UsuarioController","login",false);
+        $this->rotas['/login'] = new Endpoint("Controller/UsuarioController","login",false);
 
-        $this -> rotas ['/cliente/listar'] = new Endpoint("Controller/ClienteController","listar",true);
-        $this -> rotas ['/cliente/salvar'] = new Endpoint("Controller/ClienteController","salvar",true);
-        $this -> rotas ['/cliente/apagar'] = new Endpoint("Controller/ClienteController","apagar",true);
+        $this->rotas['/cliente/listar'] = new Endpoint("Controller/ClienteController","listar",true);
+        $this->rotas['/cliente/salvar'] = new Endpoint("Controller/ClienteController","salvar",true);
+        $this->rotas['/cliente/apagar'] = new Endpoint("Controller/ClienteController","apagar",true);
 
 }
 
@@ -21,8 +21,8 @@ class rotas {
         
         $rotas = $_SERVER ['PATH_INFO'] ?? '/';
 
-        if (!isset($this-> rota [$rotas])){
-            echo jason_encode (["error"=>"Rota nao encontrada"]);
+        if (!isset($this->rotas[$rotas])){
+            echo json_encode (["error"=>"Rota nao encontrada"]);
             return;
         }
 
@@ -39,7 +39,7 @@ class rotas {
         
         }
 
-        if(!token::validar($matches[1])){
+        if(!Token::validar($matches[1])){
             echo json_encode (["error"=>"Token invalido"]);
             return;
         }
@@ -48,7 +48,7 @@ class rotas {
         $class =  $tk -> controller;
         $obj = new $class();
 
-        $dados = jason_decode (file_get_contents('php://input'),true)??[];
+        $dados=json_decode(file_get_contents('php://input'),true)??[];
 
         $obj -> {$tk -> metodo}($dados);
 

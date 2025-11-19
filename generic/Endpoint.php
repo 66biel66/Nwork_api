@@ -14,4 +14,7 @@ class Endpoint{
         $this->requerToken=$requerToken;
     }
 
+    public function requireToken() {
+        return $this->requerToken;
+    }
 }
