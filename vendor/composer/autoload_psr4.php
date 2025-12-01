@@ -6,7 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Generic\\' => array($baseDir . '/generic'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
-    'Administrador\\NworkApi\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/src'),
 );

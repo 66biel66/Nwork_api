@@ -1,15 +1,10 @@
 {
-    "name": "administrador/nwork_api",
-    "autoload": {
-        "psr-4": {
-            "Administrador\\NworkApi\\": "src/", "Generic\\": "generic/"
-        }
-    },
-    "authors": [
-        {
-            "name": "66biel66",
-            "email": "gbsanto751@gmail.com"
-        }
-    ],
-    "require": {}
+  "require": {
+    "firebase/php-jwt": "^6.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
 }

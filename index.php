@@ -1,8 +1,7 @@
 <?php
-require_once "generic/Autoload.php";
-require_once __DIR__ . "/vendor/autoload.php";
+require __DIR__ . '/vendor/autoload.php';
 
-use Generic\Rotas;
+use App\Generic\Rotas;
 
 $rotas = new Rotas();
-$rotas->carregar();
+$rotas->handle($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
